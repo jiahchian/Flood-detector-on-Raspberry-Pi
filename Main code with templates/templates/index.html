@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Ultrasonic Sensor Distance Reading {% endblock %}
+{% block content %}
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1937060/charts/1?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=60&type=column"></iframe>
+<p>Distance: <span id="distance"></span> cm</p>
+    <button onclick="window.location.href='/set_distance'">Set Reference Distance</button>
+    <script>
+      function updateDistance() {
+        fetch("/distance")
+          .then(response => response.text())
+          .then(distance => {
+            document.getElementById("distance").innerText = distance;
+            setTimeout(updateDistance, 1000); // Update distance every 1 second
+          });
+      }
+      updateDistance();
+    </script>
+{% endblock %}

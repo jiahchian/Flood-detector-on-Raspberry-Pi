@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Ultrasonic Sensor Distance Reading {% endblock %}
+{% block content %}
+<h1>Set Distance</h1>
+    <form method="POST" action="/set_distance">
+    <p>Reference Distance: </p>
+    <p><input type="number" name="distance"></p>
+    <p><input type="submit" value="Set Distance"></p>
+    <!--button onclick="window.location.href='/index'">Back to home</button-->
+    <input type="button" value="Go back to home" onclick="history.back()">
+{% endblock %}

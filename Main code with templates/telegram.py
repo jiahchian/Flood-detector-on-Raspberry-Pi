@@ -2,10 +2,10 @@ import telebot
 import subprocess
 
 # Set your Telegram bot token here
-TOKEN = '6254032034:AAEc9zXMd_f3FOuWFSn1PGyGz9hOv6tdEMw'
+TOKEN = '-'
 
 # Set your specific Telegram chat ID here
-SPECIFIC_CHAT_ID = '-1001848432375'
+SPECIFIC_CHAT_ID = '-'
 
 # Create the bot instance
 bot = telebot.TeleBot(TOKEN)

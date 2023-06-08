@@ -11,7 +11,7 @@ GPIO.setup(TRIG_PIN, GPIO.OUT)
 GPIO.setup(ECHO_PIN, GPIO.IN)
 
 # set up the Thingspeak API parameters
-THINGSPEAK_API_KEY = '402IFPTN77K8C666'
+THINGSPEAK_API_KEY = 'THINGSPEAK_WRITE_API_KEY'
 THINGSPEAK_URL = 'https://api.thingspeak.com/update'
 
 # function to measure the distance using the ultrasonic sensor
